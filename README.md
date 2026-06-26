@@ -236,11 +236,7 @@ The application uses JWT (JSON Web Tokens) for authentication.
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots here after deployment.
-
-Suggested screenshots:
+## 📸 Some pages
 
 * Home Page
 * Product Listing
