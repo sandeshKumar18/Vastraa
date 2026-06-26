@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  font-family: 'Inter', sans-serif; 
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Premium text selection */
+::selection {
+  background-color: #c9a96e;
+  color: #1a1a2e;
+}
+
+/* Subtle refined scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+/* Subtle link transitions globally */
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
