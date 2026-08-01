@@ -31,7 +31,7 @@ const Search = ({ isTransparent }) => {
         
         /* Full width Search Overlay */
         <div className="absolute top-0 left-0 w-full bg-white h-24 flex items-center justify-center z-50 px-4">
-          <form className="relative w-full max-w-4xl flex items-center justify-center">
+          <form onSubmit={handleSearch} className="relative w-full max-w-4xl flex items-center justify-center">
             <div className="relative w-full">
               <input
                 type="text"

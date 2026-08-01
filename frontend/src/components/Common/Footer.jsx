@@ -4,6 +4,7 @@ import { TbBrandMeta } from 'react-icons/tb';
 import { IoLogoInstagram } from 'react-icons/io5';
 import { RiTwitterXLine } from 'react-icons/ri';
 import { FiPhoneCall } from 'react-icons/fi';
+import { FaLink, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -74,7 +75,7 @@ const Footer = () => {
           <p className="text-gray-500 text-sm mb-2">Call Us</p>
           <p className="flex items-center text-gray-800 font-medium">
             <FiPhoneCall className="inline-block mr-2" />
-            0123-456-789
+            +91 9528480643
           </p>
         </div>
         </div>
@@ -83,6 +84,8 @@ const Footer = () => {
       <div className="container mx-auto mt-12 px-4 lg:px-0 border-t border-gray-200 pt-6">
         <p className="text-gray-500 text-sm tracking-tighter text-center">
           © 2026, Vastraa. All Rights Reserved.
+          <br></br>
+          Designed by <a href="https://www.linkedin.com/in/sandesh-kumar-1a3628328/" className="text-gray-800 hover:text-gray-500 transition-colors">  Sandesh Kumar <FaLinkedin className="inline-block mr-1" /></a>
         </p>
       </div>
 

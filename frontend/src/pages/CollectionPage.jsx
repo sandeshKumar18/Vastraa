@@ -50,7 +50,7 @@ const CollectionPage = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-grow p-4">
+      <div className="flex-grow p-4 w-85">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl uppercase font-bold">
             {collection ? `${collection} Collection` : "All Collection"}

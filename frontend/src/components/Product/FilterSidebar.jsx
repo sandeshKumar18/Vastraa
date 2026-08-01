@@ -59,7 +59,7 @@ const FilterSidebar = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 border-r w-50">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-xl font-medium text-gray-800">Filter</h3>
         <button 
