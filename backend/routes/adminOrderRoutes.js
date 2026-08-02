@@ -1,4 +1,4 @@
- const express = require("express");
+const express = require("express");
 const Order = require("../models/Order");
 const { protect, admin } = require("../middleware/authMiddleware");
 
@@ -56,15 +56,15 @@ router.put("/:id", protect, admin, async (req, res) => {
 // @access Private/Admin
 router.delete("/:id", protect, admin, async (req, res) => {
     try {
-        // 1. \given the order ID from the request parameters, find the order in the database
+        // 1. \given order ID from the request parameters, find the order in the database
         const order = await Order.findById(req.params.id);
 
         if (order) {
-            // 2. given the order exists, delete it from the database
+            // 2. given order exists, delete it from the database
             await order.deleteOne();
             res.json({ message: "Order removed" });
         } else {
-            // 3. given the order is not found, return a 404 error
+            // given the order is not found, return a 404 error
             res.status(404).json({ message: "Order not found" });
         }
     } catch (error) {

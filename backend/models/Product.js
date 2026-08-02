@@ -105,7 +105,7 @@ const productSchema = new mongoose.Schema({
         unit: { type: String, default: 'cm' }
     }
 }, {
-    timestamps: true, // CreatedAt සහ UpdatedAt ස්වයංක්‍රීයව එක් කරයි
+    timestamps: true,
 });
 
 const Product = mongoose.model('Product', productSchema);

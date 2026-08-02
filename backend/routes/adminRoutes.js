@@ -11,8 +11,7 @@ router.get("/", protect, admin, async (req, res) => {
     try {
         // find all users in the database
         const users = await User.find({});
-        
-        // if successfully retrieved users, send them as JSON response
+    
         res.json(users);
     } catch (error) {
         console.error("Admin Get Users Error:", error);
