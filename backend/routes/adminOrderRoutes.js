@@ -9,7 +9,6 @@ const router = express.Router();
 // @access Private/Admin
 router.get("/", protect, admin, async (req, res) => {
     try {
-        // find all orders in the database and populate user information
         // get all orders from the database and include the user's name and email in the response
         const orders = await Order.find({}).populate("user", "name email");
         
@@ -31,7 +30,7 @@ router.put("/:id", protect, admin, async (req, res) => {
             // update the order status based on the request body
             order.status = req.body.status || order.status;
 
-            // 2. if the status is "Delivered", mark the order as delivered and set the deliveredAt timestamp
+            // 2. status is "Delivered", mark the order as delivered and set the deliveredAt timestamp
             order.isDelivered = 
                 req.body.status === "Delivered" ? true : order.isDelivered;
 
@@ -56,7 +55,7 @@ router.put("/:id", protect, admin, async (req, res) => {
 // @access Private/Admin
 router.delete("/:id", protect, admin, async (req, res) => {
     try {
-        // 1. \given order ID from the request parameters, find the order in the database
+        
         const order = await Order.findById(req.params.id);
 
         if (order) {
@@ -64,7 +63,6 @@ router.delete("/:id", protect, admin, async (req, res) => {
             await order.deleteOne();
             res.json({ message: "Order removed" });
         } else {
-            // given the order is not found, return a 404 error
             res.status(404).json({ message: "Order not found" });
         }
     } catch (error) {
